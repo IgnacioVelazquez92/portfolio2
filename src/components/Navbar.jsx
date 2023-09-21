@@ -9,7 +9,7 @@ const Navbar = () => {
 
   const content = (
     <>
-      <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-gray-800  transition">
+      <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-gray-800/95  transition">
         <ul className="text-center text-xl p-20">
           <Link spy={true} smooth={true} to="about">
             <li className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded">
@@ -44,7 +44,9 @@ const Navbar = () => {
     <nav className="lg:sticky top-0 z-50">
       <div className="h-10vh flex justify-between  text-white  lg:py-5 px-20 py-4 border-b bg-gray-800/90 ">
         <div className="flex items-center flex-1">
-          <span className="text-3xl font-bold">Ignacio Velazquez</span>
+          <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-600 to-green-50">
+            Ignacio Velazquez
+          </span>
         </div>
         <div className="lg:flex lg:flex-1 items-center justify-end font-normal hidden">
           <div className="flex-10 ">
