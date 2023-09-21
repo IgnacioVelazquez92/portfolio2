@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Barra de scroll vertical */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent; /* Fondo transparente */
+}
+
+/* Riel de la barra de scroll */
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+/* Pulsador (thumb) de la barra de scroll */
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #00ff80; /* Color verde (green-400) */
+}
+
+/* Cambio de estilo al hacer hover sobre la barra de scroll */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #00cc66; /* Color verde más oscuro al hacer hover */
+}
+
+/* Barra de scroll horizontal */
+::-webkit-scrollbar-horizontal {
+  height: 8px;
+  background-color: transparent;
+}
+
+/* Riel de la barra de scroll horizontal */
+::-webkit-scrollbar-track-horizontal {
+  border-radius: 8px;
+  background-color: transparent;
+}
+
+/* Pulsador (thumb) de la barra de scroll horizontal */
+::-webkit-scrollbar-thumb-horizontal {
+  border-radius: 8px;
+  background-color: #00ff80;
+}
+
+/* Cambio de estilo al hacer hover sobre la barra de scroll horizontal */
+::-webkit-scrollbar-thumb-horizontal:hover {
+  background-color: #00cc66;
+}

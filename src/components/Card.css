@@ -1,0 +1,18 @@
+/* Card.css */
+/* Personalización de la barra de desplazamiento */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #4ADE80; /* Cambia este valor al color que desees, como 'text-green-400' */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #ccc; /* Cambia este valor al color que desees para la pista de la barra de desplazamiento */
+}
+
+/* Estilo adicional para el hover */
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background-color: #2d9b91; /* Cambia este valor al color que desees cuando se hace hover */
+}
