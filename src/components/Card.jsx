@@ -22,14 +22,17 @@ const Card = ({ project }) => {
           >
             Frontend Repo
           </a>
-          <a
-            href={project.repoBack}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-green-400  font-bold hover:underline mb-2"
-          >
-            Backend Repo
-          </a>
+          {project.repoBack !== "" && (
+            <a
+              href={project.repoBack}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-green-400  font-bold hover:underline mb-2"
+            >
+              Backend Repo
+            </a>
+          )}
+
           <a
             href={project.link}
             target="_blank"

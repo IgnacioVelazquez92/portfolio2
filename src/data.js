@@ -20,14 +20,24 @@ export const projects = [
     repoBack: "https://github.com/andimenendez/proyectoFinal-backend.git",
   },
   {
+    title: "Polaris 3D",
+    subtitle: "JavaScript & Bootstrap",
+    description:
+      "Este es mi segundo proyecto web, el primero donde comence a utilizar JavaScript. Fue un proyecto donde intente reaizar un boceto de como se vería la página web de mi emprendimiento.",
+    image: "assets/project/giffs/polaris.gif",
+    link: "https://polaris-3d.netlify.app//",
+    repoFront: "https://github.com/IgnacioVelazquez92/Polaris.git",
+    repoBack: "",
+  },
+  {
     title: "Cinefilos",
     subtitle: "Bootstrap",
     description:
-      "Este es mi primer proyecto web en el que utilicé HTML, CSS y Bootstrap para maquetar una plataforma de películas . Fue un proyecto desafiante para mi en aquel momento, pero me permitió aprender mucho sobre estos lenguajes y frameworks.",
+      "Este es mi primer proyecto web en el que utilicé HTML, CSS y Bootstrap para maquetar una plataforma de películas . Fue un proyecto desafiante para mi en aquel momento, pero me permitió aprender mucho sobre estos lenguajes y framework.",
     image: "assets/project/giffs/cinefilos.gif",
     link: "https://cinefilos-rolling-24i.netlify.app/",
     repoFront: "https://github.com/IgnacioVelazquez92/cinefilos-24i.git",
-    repoBack: "https://github.com/IgnacioVelazquez92/cinefilos-24i.git",
+    repoBack: "",
   },
 ];
 

@@ -16,7 +16,7 @@ const About = () => {
             Team Leader en Startek, donde lidero a un equipo hacia el
             cumplimiento de KPIs. Sin embargo, mi verdadera pasión reside en el
             mundo de la tecnología y sueño con la oportunidad de realizar una
-            transición formal hacia la industria de la informática.
+            transición formal hacia el sector IT.
           </p>
           <div className="flex justify-center">
             <a
@@ -38,7 +38,7 @@ const About = () => {
           <img
             className="object-cover object-center rounded-full mx-auto"
             alt="Ignacio"
-            src="assets/img/yo-webp.webp"
+            src="assets/img/IV.webp"
           />
         </div>
       </div>
