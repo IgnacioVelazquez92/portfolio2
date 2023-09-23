@@ -10,6 +10,11 @@ export default function Contact() {
     message: "",
   });
   const [loading, setLoading] = useState(false);
+  const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+  const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+  const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+
+  console.log(SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,35 +24,33 @@ export default function Contact() {
   function handleSubmit(e) {
     e.preventDefault();
     setLoading(true);
-    emailjs
-      .send("service_n1kyxgo", "template_ed48f29", user, "ZZ-IFdvC3ERRR2y1r")
-      .then(
-        (result) => {
-          console.log(result.text);
-          Swal.fire({
-            title: "¡Éxito!",
-            text: "Enviado con éxito",
-            icon: "success",
-            confirmButtonText: "Aceptar",
-          });
-          setUser({
-            name: "",
-            email: "",
-            message: "",
-          });
-          setLoading(false);
-        },
-        (error) => {
-          console.log(error.text);
-          Swal.fire({
-            title: "¡Error!",
-            text: "Upsss.. algo fallo, intenta vía mail",
-            icon: "error",
-            confirmButtonText: "Aceptar",
-          });
-          setLoading(false);
-        }
-      );
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, user, PUBLIC_KEY).then(
+      (result) => {
+        console.log(result.text);
+        Swal.fire({
+          title: "¡Éxito!",
+          text: "Enviado con éxito",
+          icon: "success",
+          confirmButtonText: "Aceptar",
+        });
+        setUser({
+          name: "",
+          email: "",
+          message: "",
+        });
+        setLoading(false);
+      },
+      (error) => {
+        console.log(error.text);
+        Swal.fire({
+          title: "¡Error!",
+          text: "Upsss.. algo fallo, intenta vía mail",
+          icon: "error",
+          confirmButtonText: "Aceptar",
+        });
+        setLoading(false);
+      }
+    );
   }
 
   return (
@@ -127,7 +130,7 @@ export default function Contact() {
               pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$"
               required
             />
-            <p class="mt-1  peer-invalid:block hidden text-pink-600 text-sm">
+            <p className="mt-1  peer-invalid:block hidden text-pink-600 text-sm">
               Por favor introduce un mail valido.
             </p>
           </div>
