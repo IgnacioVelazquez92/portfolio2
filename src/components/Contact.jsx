@@ -1,12 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import Swal from "sweetalert2";
+import { Comment } from "react-loader-spinner";
 
 export default function Contact() {
-  const [name, setName] = React.useState("");
-  const [email, setEmail] = React.useState("");
-  const [message, setMessage] = React.useState("");
+  const [user, setUser] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setUser((prevUser) => ({ ...prevUser, [name]: value }));
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
+    setLoading(true);
+    emailjs
+      .send("service_n1kyxgo", "template_ed48f29", user, "ZZ-IFdvC3ERRR2y1r")
+      .then(
+        (result) => {
+          console.log(result.text);
+          Swal.fire({
+            title: "¡Éxito!",
+            text: "Enviado con éxito",
+            icon: "success",
+            confirmButtonText: "Aceptar",
+          });
+          setUser({
+            name: "",
+            email: "",
+            message: "",
+          });
+          setLoading(false);
+        },
+        (error) => {
+          console.log(error.text);
+          Swal.fire({
+            title: "¡Error!",
+            text: "Upsss.. algo fallo, intenta vía mail",
+            icon: "error",
+            confirmButtonText: "Aceptar",
+          });
+          setLoading(false);
+        }
+      );
   }
 
   return (
@@ -54,7 +95,7 @@ export default function Contact() {
           className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0"
         >
           <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
-            ¿Necesitas asistencia?
+            ¿Quieres decirme algo?
           </h2>
           <p className="leading-relaxed mb-5">
             Estoy a un clic de distancia. Envíame tu consulta.
@@ -68,9 +109,11 @@ export default function Contact() {
               id="name"
               name="name"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setName(e.target.value)}
+              onChange={handleChange}
+              required
             />
           </div>
+
           <div className="relative mb-4">
             <label htmlFor="email" className="leading-7 text-sm text-gray-400">
               Correo electrónico
@@ -79,10 +122,16 @@ export default function Contact() {
               type="email"
               id="email"
               name="email"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setEmail(e.target.value)}
+              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out peer"
+              onChange={handleChange}
+              pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$"
+              required
             />
+            <p class="mt-1  peer-invalid:block hidden text-pink-600 text-sm">
+              Por favor introduce un mail valido.
+            </p>
           </div>
+
           <div className="relative mb-4">
             <label
               htmlFor="message"
@@ -94,14 +143,32 @@ export default function Contact() {
               id="message"
               name="message"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={handleChange}
+              required
             />
           </div>
+
           <button
             type="submit"
-            className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            className=" bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded flex justify-center gap-5"
           >
-            Enviar
+            {loading ? (
+              <>
+                <span className="text-lg text-white">Enviando</span>
+                <Comment
+                  visible={true}
+                  height="30"
+                  width="30"
+                  ariaLabel="comment-loading"
+                  wrapperStyle={{}}
+                  wrapperClass="comment-wrapper"
+                  color="#6366F1"
+                  backgroundColor="#f4f4f4"
+                />
+              </>
+            ) : (
+              <span className="text-lg text-white">Enviar</span>
+            )}
           </button>
         </form>
       </div>

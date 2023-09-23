@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-dark text-white">
-      <div className="flex justify-between text-center bg-gray-600 py-4 md:px-16 ">
-        <span className="text-white text-lg">© 2023 Ignacio Velazquez 💙</span>
+      <div className="flex justify-between text-center bg-gray-600 py-4 px-4 md:px-16 ">
+        <span className="text-white text-lg"> ©Ignacio Velazquez</span>
         <div className="text-lg">
           <a
             href="https://www.instagram.com/ignaciovelazquez92/"

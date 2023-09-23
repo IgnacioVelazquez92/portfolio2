@@ -34,12 +34,42 @@ const About = () => {
             </a>
           </div>
         </div>
-        <div className="lg:max-w-lg lg:w-full  md:w-1/2 w-5/6">
+        <div className="lg:max-w-lg lg:w-1/3  md:w-1/2 w-5/6 flex flex-col justify-center items-center ">
           <img
             className="object-cover object-center rounded-full mx-auto"
             alt="Ignacio"
             src="assets/img/IV.webp"
           />
+          <div className="text-lg">
+            <a
+              href="https://www.instagram.com/ignaciovelazquez92/"
+              target={"_blank"}
+              className="text-green-400 hover:text-white mx-2 transition duration-300"
+            >
+              <i className="bi bi-instagram"></i>
+            </a>
+            <a
+              href="https://twitter.com/Ignacio_V10"
+              target={"_blank"}
+              className="text-green-400 hover:text-white mx-2 transition duration-300"
+            >
+              <i className="bi bi-twitter-x"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/omar-ignacio-velazquez-44499414a/"
+              target={"_blank"}
+              className="text-green-400 hover:text-white mx-2 transition duration-300"
+            >
+              <i className="bi bi-linkedin"></i>
+            </a>
+            <a
+              target={"_blank"}
+              href="https://github.com/IgnacioVelazquez92"
+              className="text-green-400 hover:text-white mx-2 transition duration-300"
+            >
+              <i className="bi bi-github"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
