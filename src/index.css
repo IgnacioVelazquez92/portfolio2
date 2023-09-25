@@ -48,3 +48,24 @@
 ::-webkit-scrollbar-thumb-horizontal:hover {
   background-color: #00cc66;
 }
+
+
+@keyframes show {
+  from{
+    opacity: 0;
+    scale: 25%;
+  }
+  to{
+    opacity:1;
+    scale: 100%;
+  }
+}
+
+.seccion__animada{
+  view-timeline-name: --seccion;
+  view-timeline-axis:block;
+  animation-timeline: --seccion;
+  animation-name:show;
+  animation-range: entry 25% cover 45%;
+  animation-fill-mode:both;
+}

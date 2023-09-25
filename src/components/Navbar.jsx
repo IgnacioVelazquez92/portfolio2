@@ -5,15 +5,26 @@ import { CiMenuFries } from "react-icons/ci";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
-  const handleClick = () => setClick(!click);
+  const [estilo, setEstilo] = useState("");
 
+  const handleClick = () => {
+    if (click) {
+      setEstilo("animate__animated animate__bounceOutRight");
+      setTimeout(() => setClick(false), 300);
+    } else {
+      setClick(true);
+      setEstilo("animate__animated animate__fadeInLeft");
+    }
+  };
   const content = (
     <>
-      <div className="lg:hidden block absolute top-16 w-full left-0 right-0 bg-gray-800/95  transition">
+      <div
+        className={`lg:hidden block absolute top-16 w-full left-0 right-0 bg-gray-800/95 transition ${estilo}`}
+      >
         <ul className="text-center text-xl p-20">
           <Link spy={true} smooth={true} to="about">
             <li
-              className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded"
+              className="my-4 py-4 border-b border-slate-800 hover:bg-green-400 hover:rounded "
               onClick={handleClick}
             >
               About
@@ -21,7 +32,7 @@ const Navbar = () => {
           </Link>
           <Link spy={true} smooth={true} to="projects">
             <li
-              className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded"
+              className="my-4 py-4 border-b border-slate-800  hover:bg-green-400 hover:rounded"
               onClick={handleClick}
             >
               Projects
@@ -29,7 +40,7 @@ const Navbar = () => {
           </Link>
           <Link spy={true} smooth={true} to="skills">
             <li
-              className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded"
+              className="my-4 py-4 border-b border-slate-800  hover:bg-green-400 hover:rounded"
               onClick={handleClick}
             >
               Skills
@@ -37,7 +48,7 @@ const Navbar = () => {
           </Link>
           <Link spy={true} smooth={true} to="testimonials">
             <li
-              className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded"
+              className="my-4 py-4 border-b border-slate-800  hover:bg-green-400 hover:rounded"
               onClick={handleClick}
             >
               Testimonials
@@ -45,7 +56,7 @@ const Navbar = () => {
           </Link>
           <Link spy={true} smooth={true} to="contact">
             <li
-              className="my-4 py-4 border-b border-slate-800 hover:bg-slate-800 hover:rounded"
+              className="my-4 py-4 border-b border-slate-800  hover:bg-green-400 hover:rounded"
               onClick={handleClick}
             >
               Contact
