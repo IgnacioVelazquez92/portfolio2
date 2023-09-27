@@ -56,27 +56,18 @@ export const skills = [
 
 export const testimonials = [
   {
-    name: "John Doe",
-    company: "ABC Inc.",
+    name: "Silvana Dominguez",
+    company: "Startek Latam.",
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ultricies ex a justo cursus, id maximus erat vulputate.",
-    image:
-      "https://static.vecteezy.com/system/resources/previews/013/078/569/non_2x/illustration-of-cute-colored-cat-cartoon-cat-image-in-format-suitable-for-children-s-book-design-elements-introduction-of-cats-to-children-books-or-posters-about-animal-free-png.png",
+      "El proyecto que Omar desarrolló demostró una originalidad excepcional, una estética y una funcionalidad impecable, lo que dejó una impresión extremadamente positiva en nuestro cliente.",
+    image: "https://companieslogo.com/img/orig/SRT-570166ed.png?t=1684319296",
   },
   {
-    name: "Jane Smith",
-    company: "XYZ Co.",
+    name: "Daniel E. Paolino",
+    company: "TELECOM",
     quote:
-      "Sed euismod turpis vel diam bibendum, nec aliquam neque congue. Nulla facilisi. Sed facilisis varius velit, et tincidunt elit interdum sit amet.",
+      "La página es original e innovadora, y destaco la importancia de poner al abonado final en el centro, enfatizando la capacidad de leer sus encuestas y trabajar proactivamente en su atención personalizada como aspecto más destacados del proyecto.",
     image:
-      "https://static.vecteezy.com/system/resources/previews/013/078/569/non_2x/illustration-of-cute-colored-cat-cartoon-cat-image-in-format-suitable-for-children-s-book-design-elements-introduction-of-cats-to-children-books-or-posters-about-animal-free-png.png",
-  },
-  {
-    name: "Bob Johnson",
-    company: "123 Corp.",
-    quote:
-      "Aenean sagittis, dolor at efficitur convallis, ligula sem commodo urna, ac blandit tellus libero nec felis.",
-    image:
-      "https://static.vecteezy.com/system/resources/previews/013/078/569/non_2x/illustration-of-cute-colored-cat-cartoon-cat-image-in-format-suitable-for-children-s-book-design-elements-introduction-of-cats-to-children-books-or-posters-about-animal-free-png.png",
+      "https://yt3.googleusercontent.com/T7SwV-tK-VJZAha-l2lqG6DanX6QURMtwDkt9dZXHbmylVFG_Xm-gOIWRk-SNl3sa7D0XgrY=s900-c-k-c0x00ffffff-no-rj",
   },
 ];
