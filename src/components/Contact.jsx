@@ -81,7 +81,7 @@ export default function Contact() {
                 CORREO ELECTRÓNICO
               </h2>
               <a className="text-indigo-400 leading-relaxed">
-                ignaciov92@email.com
+                ignaciov92@gmail.com
               </a>
               <h2 className="title-font font-semibold text-white tracking-widest text-xs mt-4">
                 NÚMERO DE TELÉFONO
