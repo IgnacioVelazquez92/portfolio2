@@ -10,6 +10,16 @@ export const projects = [
     repoBack: "https://github.com/IgnacioVelazquez92/startek-nps-back.git",
   },
   {
+    title: "Lab9",
+    subtitle: "DeisyUI TailwindCSS Redux-Toolkit",
+    description:
+      "Este proyecto web Lo tuve que realizar en 6 días para mi primer entrevista para una empresa llamada lab9, donde tenia que aplicar: react-router-dom redux-toolkit y ademas utilizar la libreria deysyUI para los componentes.",
+    image: "assets/project/giffs/entrevista.gif",
+    link: "https://entrevistalab9.netlify.app/",
+    repoFront: "https://github.com/IgnacioVelazquez92/Lab9-entrevista.git",
+    repoBack: "https://github.com/IgnacioVelazquez92/entrevista-lab9-back.git",
+  },
+  {
     title: "AM-Creaciones",
     subtitle: "MERN Stack",
     description:
@@ -46,6 +56,7 @@ export const skills = [
   "CSS",
   "Tailwind CSS",
   "Bootstrap",
+  "DeisyUI",
   "JavaScript",
   "ReactJS",
   "ExpressJS",
