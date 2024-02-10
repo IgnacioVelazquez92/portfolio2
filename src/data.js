@@ -62,6 +62,7 @@ export const skills = [
   "ExpressJS",
   "NodeJS",
   "MongoDB",
+  "SQL",
   "Git & GitHub",
   "C#",
   ".Net Framework",

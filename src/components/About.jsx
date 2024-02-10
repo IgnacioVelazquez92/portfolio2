@@ -11,7 +11,7 @@ const About = () => {
             FullStack Developer
           </h1>
           <p className="mb-8 leading-relaxed">
-            Soy desarrollador FullStack MERN con más de 1 año de experiencia en
+            Soy desarrollador FullStack MERN con año y medio de experiencia en
             la creación de aplicaciones web. Actualmente, ocupo el puesto de
             Team Leader en Startek, donde lidero a un equipo hacia el
             cumplimiento de KPIs. Sin embargo, mi verdadera pasión reside en el
