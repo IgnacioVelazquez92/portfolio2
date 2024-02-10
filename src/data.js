@@ -63,22 +63,24 @@ export const skills = [
   "NodeJS",
   "MongoDB",
   "Git & GitHub",
+  "C#",
+  ".Net Framework",
 ];
 
 export const testimonials = [
   {
     name: "Silvana Dominguez",
-    company: "Startek Latam.",
+    company: "Supervisora Sr Startek Latam.",
     quote:
       "El proyecto que Omar desarrolló demostró una originalidad excepcional, una estética y una funcionalidad impecable, lo que dejó una impresión extremadamente positiva en nuestro cliente.",
     image: "https://companieslogo.com/img/orig/SRT-570166ed.png?t=1684319296",
   },
-  {
-    name: "Daniel E. Paolino",
-    company: "TELECOM",
-    quote:
-      "La página es original e innovadora, y destaco la importancia de poner al abonado final en el centro, enfatizando la capacidad de leer sus encuestas y trabajar proactivamente en su atención personalizada como aspecto más destacados del proyecto.",
-    image:
-      "https://yt3.googleusercontent.com/T7SwV-tK-VJZAha-l2lqG6DanX6QURMtwDkt9dZXHbmylVFG_Xm-gOIWRk-SNl3sa7D0XgrY=s900-c-k-c0x00ffffff-no-rj",
-  },
+  // {
+  //   name: "Daniel E. Paolino",
+  //   company: "TELECOM",
+  //   quote:
+  //     "La página es original e innovadora, y destaco la importancia de poner al abonado final en el centro, enfatizando la capacidad de leer sus encuestas y trabajar proactivamente en su atención personalizada como aspecto más destacados del proyecto.",
+  //   image:
+  //     "https://yt3.googleusercontent.com/T7SwV-tK-VJZAha-l2lqG6DanX6QURMtwDkt9dZXHbmylVFG_Xm-gOIWRk-SNl3sa7D0XgrY=s900-c-k-c0x00ffffff-no-rj",
+  // },
 ];
