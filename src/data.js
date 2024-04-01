@@ -1,5 +1,14 @@
 export const projects = [
   {
+    title: "Polaris 3D SSR",
+    subtitle: "Node & ExpressJS",
+    description:
+      "Este proyecto fue desarrollado para un  curso que desarrolle en Digit@lers TELECOM. Desarrollo de aplicaciones con node JS Claves de usuarios encriptadas con bcrypt autenticación con JWT, express sessión y envío de mail a usuarios con nodemailer",
+    image: "assets/project/giffs/Polaris3D.gif",
+    link: "http://polaris3d.onrender.com/",
+    repoBack: "https://github.com/IgnacioVelazquez92/backexpress-hbs",
+  },
+  {
     title: "NPS Startek",
     subtitle: "MERN Stack & Firebase",
     description:
